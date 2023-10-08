@@ -5,9 +5,14 @@ use clap::Parser;
 struct Args {
     #[arg(short,long)]
     word: String,
+
+    #[arg(short,long, default_value = "1")]
+    times: u32,
 }
 
 fn main() {
     let args = Args::parse();
-    println!("{:?}", args.word);
+    for _ in 0..args.times {
+        println!("{}", args.word);
+    }
 }

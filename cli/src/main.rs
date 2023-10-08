@@ -1,7 +1,7 @@
 use clap::Parser;
 
 #[derive(Parser, Debug)]
-#[command(author = "Brian Silah", version = "0.1", about = "A simple CLI that echos the word given", long_about = None)]
+#[command(author = "Brian Silah", version = "0.1", about = "A simple CLI that echos the word given for the specified number of times.\nThe number defaults to 0 when not given.", long_about = None)]
 struct Args {
     #[arg(short,long)]
     word: String,
